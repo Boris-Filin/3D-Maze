@@ -1,0 +1,46 @@
+Hi, this is a tutorial for this simple level editor.
+
+The compiler only takes the lines with the right syntax,
+skipping everything inluding this text.
+
+The first line it will read is the following:
+
+s 2.0 3.0 2.0 -2.0
+
+The compiler does not mind commas, parentheses and semicolons, so the following line is valid, too:
+
+s (-2.0, 2.0), (-2.0, -3.0);
+
+Now, to the meaning of that line.
+In this case, "s" in the beginning indicates that it is
+a segment of a straight line (which is then seen as a straight wall).
+A wall is the only thing you can create for now.
+The following 4 numbers are the x and z positions of two ends of the segment.
+
+s (-2.0, 2.0), (2.0, 3.0);
+
+This line creates a wall starting at point (-2, 2) and ending at(2, 3)
+Non-integer positions are supported, too.
+For example, let's create an entrance to our room that we're building:
+
+s (-2, -3), (-0.5, -2.675);
+s (2, -2), (0.5, -2.375);
+
+Another thing you can do with this editor is change player's starting
+position and rotation. 
+
+p (0.5, -0.5);
+
+or
+
+p 0.5 -0.5
+
+sets the player's starting position to 0.5 x and -0.5 z.
+
+r 90
+
+Rotates the camera 90 degrees counterclockwise.
+
+That is it for the tutorial.
+Now you just save your file as a .txt (that's important) in this exact folder
+and it will be visible in the level selection menu inside the game!
